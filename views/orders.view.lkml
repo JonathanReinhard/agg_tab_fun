@@ -12,6 +12,7 @@ view: orders {
     type: time
     timeframes: [
       raw,
+      day_of_week,
       time,
       date,
       week,
