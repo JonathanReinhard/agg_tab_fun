@@ -29,7 +29,8 @@
     conditional_formatting_include_nulls: false
     series_types: {}
     defaults_version: 1
-    listen: {}
+    listen:
+      Category: products.category
     row: 0
     col: 15
     width: 9
@@ -123,6 +124,7 @@
     series_types: {}
     listen:
       Department: products.department
+      Category: products.category
     row: 0
     col: 0
     width: 15
@@ -142,3 +144,17 @@
     explore: products
     listens_to_filters: []
     field: products.department
+  - name: Category
+    title: Category
+    type: field_filter
+    default_value: ''
+    allow_multiple_values: true
+    required: false
+    ui_config:
+      type: tag_list
+      display: popover
+      options: []
+    model: agg_tab_acc_grant
+    explore: products
+    listens_to_filters: []
+    field: products.category
