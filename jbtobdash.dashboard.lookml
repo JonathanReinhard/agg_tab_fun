@@ -35,7 +35,7 @@
     col: 15
     width: 9
     height: 9
-  - title: histogram
+  - title: histogram hello
     name: histogram
     model: agg_tab_acc_grant
     explore: products
