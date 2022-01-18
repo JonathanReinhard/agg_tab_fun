@@ -3,8 +3,8 @@
   layout: newspaper
   preferred_viewer: 'dashboards-next'
   elements:
-  - title: list of category changed
-    name: list of category changed
+  - title: カテゴリリスト
+    name: カテゴリリスト
     model: agg_tab_acc_grant
     explore: products
     type: looker_grid

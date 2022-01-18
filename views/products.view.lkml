@@ -2,6 +2,12 @@ view: products {
   sql_table_name: demo_db.products ;;
   drill_fields: [id]
 
+  # filter: order_id_filter {
+  #   type: number
+  #   suggest_dimension: id
+  #   sql: exists (select id from demo_db.products where {% condition %} id {% endcondition %} and brand = '180s' ) ;;
+  # }
+
   dimension: id {
     primary_key: yes
     type: number
@@ -42,6 +48,7 @@ view: products {
   measure: total_sales_price {
     type: sum
     sql: ${retail_price} ;;
+    drill_fields: [category,total_sales_price]
   }
 
   dimension: sku {
